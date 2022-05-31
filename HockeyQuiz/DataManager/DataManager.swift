@@ -7,11 +7,9 @@
 
 import Foundation
 
-
 class DataManager {
     
-    
-    var questions : [(question: String, rightAnswer: String, possibleAnswers: [String])] = [
+     let questions : [(question: String, rightAnswer: String, possibleAnswers: [String])] = [
         (question: "Можем ли мы менять значение переменных?",
          rightAnswer: "Да",
          possibleAnswers: ["Ну да, но вообще-то нет", "Нет", "Да", "Зависит от обстоятельств"]),
@@ -151,6 +149,4 @@ class DataManager {
          rightAnswer: "Да",
          possibleAnswers: ["Ну да, но вообще-то нет", "Нет", "Да", "Зависит от обстоятельств"])
     ]
-    
-    
 }
