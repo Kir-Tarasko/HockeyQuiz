@@ -13,8 +13,8 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet var buttonAnswers: [UIButton]!
     
-    var questions = DataManager()
-    private var test: Question!
+    var questionManager = DataManager()
+    private var questions: Question!
     private var countOfAnswers = 0
     private var countOfRightAnswers = 0
     private var indexRange = -1
@@ -40,11 +40,11 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController {
     
     private var currentQuestion: String {
-        return test.question
+        return questions.question
     }
     
     private var possibleAnswers: [String] {
-        return test.possibleAnswers
+        return questions.possibleAnswers
     }
     
     private var totalAnswers: Int {
@@ -56,7 +56,7 @@ extension QuestionsViewController {
     }
     
     private var countOfQuestions: Int {
-        questions.questions.count - 1
+        questionManager.questions.count - 1
     }
     
     private func newQuestion() {
@@ -84,7 +84,7 @@ extension QuestionsViewController {
     
     private func validateAnswer(index: Int) {
         countOfAnswers += 1
-        if test.validatePossibleAnswer(index) {
+        if questions.validatePossibleAnswer(index) {
             countOfRightAnswers += 1
         }
     }
@@ -96,6 +96,6 @@ extension QuestionsViewController {
     private func refreshTest(_ index: Int) {
         let testData = DataManager().questions[index]
         
-        test = Question(question: testData.question, possibleAnswers: testData.possibleAnswers, rightAnswer: testData.rightAnswer)
+        questions = Question(question: testData.question, possibleAnswers: testData.possibleAnswers, rightAnswer: testData.rightAnswer)
     }
 }

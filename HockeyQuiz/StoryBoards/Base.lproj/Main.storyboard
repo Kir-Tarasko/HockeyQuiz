@@ -124,7 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="ot4-SG-cLf" id="Uud-Je-WHW"/>
-                        <outlet property="question" destination="VYT-ne-EVi" id="Gb6-GG-0kV"/>
+                        <outlet property="questions" destination="VYT-ne-EVi" id="Gb6-GG-0kV"/>
                         <outletCollection property="buttonAnswers" destination="dlW-nX-aF4" collectionClass="NSMutableArray" id="uAJ-qx-Agv"/>
                         <outletCollection property="buttonAnswers" destination="EFY-zd-pMc" collectionClass="NSMutableArray" id="eAa-JR-8gC"/>
                         <outletCollection property="buttonAnswers" destination="a8L-i7-Xdm" collectionClass="NSMutableArray" id="qck-H0-Uvb"/>
@@ -220,7 +220,7 @@
         <scene sceneID="3SB-4C-ukN">
             <objects>
                 <viewController id="itn-ok-ywd" customClass="AuthorsViewController" customModule="HockeyQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="iTA-kd-GPm">
+                    <view key="view" contentMode="scaleToFill" id="iTA-kd-GPm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -238,7 +238,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kZ0-wp-lzt" firstAttribute="leading" secondItem="umq-3t-O7T" secondAttribute="leading" constant="50" id="3xr-HA-n60"/>
-                            <constraint firstItem="kZ0-wp-lzt" firstAttribute="centerY" secondItem="iTA-kd-GPm" secondAttribute="centerY" id="8HO-Yo-VDL"/>
                             <constraint firstItem="umq-3t-O7T" firstAttribute="trailing" secondItem="kZ0-wp-lzt" secondAttribute="trailing" constant="50" id="Hr1-MD-et5"/>
                             <constraint firstItem="kZ0-wp-lzt" firstAttribute="top" secondItem="umq-3t-O7T" secondAttribute="top" constant="150" id="wLA-8l-h6i"/>
                         </constraints>
